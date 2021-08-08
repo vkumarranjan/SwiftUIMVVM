@@ -11,18 +11,26 @@ struct UsersView: View {
     
     @StateObject var viewModel = UsersView.ViewModel()
     
+    init(viewModel: ViewModel = .init()) {
+            _viewModel = StateObject(wrappedValue: viewModel)
+        }
+    
     var body: some View {
         List(viewModel.users) { user in
             Text(user.name)
          }
-        .onAppear(perform: viewModel.gerusers)
+        .onAppear(perform: viewModel.getUsers)
      }
 }
 
 struct UsersView_Previews: PreviewProvider {
     static var previews: some View {
-        UsersView()
-    }
+            let user = User(id: 0, name: "Dummy")
+            let viewModel = UsersView.ViewModel()
+            viewModel.users = [user]
+            
+            return UsersView(viewModel: viewModel)
+        }
 }
 
 
@@ -30,11 +38,16 @@ struct UsersView_Previews: PreviewProvider {
 extension UsersView {
     
     class ViewModel: ObservableObject {
+        
         @Published var users = [User]()
+        let service: DataService
         
-        let service = AppDataService()
+        init(dataService: DataService = AppDataService()) {
+            self.service = dataService
+        }
         
-        func gerusers() {
+        
+        func getUsers() {
             service.getUsers { [weak self] users in
                 self?.users = users
             }
@@ -43,15 +56,3 @@ extension UsersView {
 }
 
 
-class AppDataService {
-    
-    func getUsers(completion: @escaping ([User]) -> Void) {
-        
-        completion([
-            User(id: 1, name: "Vinay"),
-            User(id: 2, name: "Radha"),
-            User(id: 3, name: "Dimpi")
-        ])
-        
-    }
-}

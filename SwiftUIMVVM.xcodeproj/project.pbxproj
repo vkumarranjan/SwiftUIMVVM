@@ -15,7 +15,19 @@
 		A1CDC69726BFF1A2004660A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CDC69526BFF1A2004660A1 /* LaunchScreen.storyboard */; };
 		A1CDC6A026BFF201004660A1 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CDC69F26BFF201004660A1 /* UsersView.swift */; };
 		A1CDC6A326BFF99A004660A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CDC6A226BFF99A004660A1 /* User.swift */; };
+		A1CDC6A726BFFAA9004660A1 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CDC6A626BFFAA9004660A1 /* Service.swift */; };
+		A1CDC6B126BFFD27004660A1 /* SwiftUIMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CDC6B026BFFD27004660A1 /* SwiftUIMVVMTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1CDC6B326BFFD27004660A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1CDC67F26BFF1A0004660A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1CDC68626BFF1A0004660A1;
+			remoteInfo = SwiftUIMVVM;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A1CDC68726BFF1A0004660A1 /* SwiftUIMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,10 +40,21 @@
 		A1CDC69826BFF1A2004660A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1CDC69F26BFF201004660A1 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		A1CDC6A226BFF99A004660A1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A1CDC6A626BFFAA9004660A1 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		A1CDC6AE26BFFD27004660A1 /* SwiftUIMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1CDC6B026BFFD27004660A1 /* SwiftUIMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMVVMTests.swift; sourceTree = "<group>"; };
+		A1CDC6B226BFFD27004660A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A1CDC68426BFF1A0004660A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1CDC6AB26BFFD27004660A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				A1CDC68926BFF1A0004660A1 /* SwiftUIMVVM */,
+				A1CDC6AF26BFFD27004660A1 /* SwiftUIMVVMTests */,
 				A1CDC68826BFF1A0004660A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				A1CDC68726BFF1A0004660A1 /* SwiftUIMVVM.app */,
+				A1CDC6AE26BFFD27004660A1 /* SwiftUIMVVMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +89,7 @@
 				A1CDC68C26BFF1A0004660A1 /* SceneDelegate.swift */,
 				A1CDC68E26BFF1A0004660A1 /* ContentView.swift */,
 				A1CDC69F26BFF201004660A1 /* UsersView.swift */,
+				A1CDC6A626BFFAA9004660A1 /* Service.swift */,
 				A1CDC6A226BFF99A004660A1 /* User.swift */,
 				A1CDC69026BFF1A2004660A1 /* Assets.xcassets */,
 				A1CDC69526BFF1A2004660A1 /* LaunchScreen.storyboard */,
@@ -79,6 +105,15 @@
 				A1CDC69326BFF1A2004660A1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A1CDC6AF26BFFD27004660A1 /* SwiftUIMVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1CDC6B026BFFD27004660A1 /* SwiftUIMVVMTests.swift */,
+				A1CDC6B226BFFD27004660A1 /* Info.plist */,
+			);
+			path = SwiftUIMVVMTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +136,24 @@
 			productReference = A1CDC68726BFF1A0004660A1 /* SwiftUIMVVM.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A1CDC6AD26BFFD27004660A1 /* SwiftUIMVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1CDC6B526BFFD27004660A1 /* Build configuration list for PBXNativeTarget "SwiftUIMVVMTests" */;
+			buildPhases = (
+				A1CDC6AA26BFFD27004660A1 /* Sources */,
+				A1CDC6AB26BFFD27004660A1 /* Frameworks */,
+				A1CDC6AC26BFFD27004660A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1CDC6B426BFFD27004660A1 /* PBXTargetDependency */,
+			);
+			name = SwiftUIMVVMTests;
+			productName = SwiftUIMVVMTests;
+			productReference = A1CDC6AE26BFFD27004660A1 /* SwiftUIMVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -112,6 +165,10 @@
 				TargetAttributes = {
 					A1CDC68626BFF1A0004660A1 = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					A1CDC6AD26BFFD27004660A1 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = A1CDC68626BFF1A0004660A1;
 					};
 				};
 			};
@@ -129,6 +186,7 @@
 			projectRoot = "";
 			targets = (
 				A1CDC68626BFF1A0004660A1 /* SwiftUIMVVM */,
+				A1CDC6AD26BFFD27004660A1 /* SwiftUIMVVMTests */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +202,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1CDC6AC26BFFD27004660A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -156,10 +221,27 @@
 				A1CDC68F26BFF1A0004660A1 /* ContentView.swift in Sources */,
 				A1CDC6A326BFF99A004660A1 /* User.swift in Sources */,
 				A1CDC6A026BFF201004660A1 /* UsersView.swift in Sources */,
+				A1CDC6A726BFFAA9004660A1 /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1CDC6AA26BFFD27004660A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1CDC6B126BFFD27004660A1 /* SwiftUIMVVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1CDC6B426BFFD27004660A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1CDC68626BFF1A0004660A1 /* SwiftUIMVVM */;
+			targetProxy = A1CDC6B326BFFD27004660A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A1CDC69526BFF1A2004660A1 /* LaunchScreen.storyboard */ = {
@@ -331,6 +413,46 @@
 			};
 			name = Release;
 		};
+		A1CDC6B626BFFD27004660A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8SBH4683ZM;
+				INFOPLIST_FILE = SwiftUIMVVMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ranjan.SwiftUIMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUIMVVM.app/SwiftUIMVVM";
+			};
+			name = Debug;
+		};
+		A1CDC6B726BFFD27004660A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8SBH4683ZM;
+				INFOPLIST_FILE = SwiftUIMVVMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ranjan.SwiftUIMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUIMVVM.app/SwiftUIMVVM";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -348,6 +470,15 @@
 			buildConfigurations = (
 				A1CDC69C26BFF1A2004660A1 /* Debug */,
 				A1CDC69D26BFF1A2004660A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1CDC6B526BFFD27004660A1 /* Build configuration list for PBXNativeTarget "SwiftUIMVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1CDC6B626BFFD27004660A1 /* Debug */,
+				A1CDC6B726BFFD27004660A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
